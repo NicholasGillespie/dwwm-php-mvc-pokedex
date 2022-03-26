@@ -1,9 +1,3 @@
-<?php
-
-
-?>
-
-
 <div class="container">
   <h1 class="text-align:center">Détails de <?= $viewVars['pokemon']->getNom() ?></h1>
   <div class="with-sidebar">

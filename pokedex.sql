@@ -1,30 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 4.6.6deb5
--- https://www.phpmyadmin.net/
---
--- Client :  localhost:3306
--- Généré le :  Lun 24 Décembre 2018 à 17:05
--- Version du serveur :  5.7.24-0ubuntu0.18.04.1
--- Version de PHP :  7.1.25-1+ubuntu18.04.1+deb.sury.org+1
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de données :  `pokedex`
---
-
--- --------------------------------------------------------
-
---
--- Structure de la table `pokemon`
---
 
 CREATE TABLE `pokemon` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -37,10 +12,6 @@ CREATE TABLE `pokemon` (
   `vitesse` int(11) NOT NULL,
   `numero` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `pokemon`
---
 
 INSERT INTO `pokemon` (`id`, `nom`, `pv`, `attaque`, `defense`, `attaque_spe`, `defense_spe`, `vitesse`, `numero`) VALUES
 (1209, 'Bulbizarre', 45, 49, 49, 65, 65, 45, 1),
@@ -195,21 +166,11 @@ INSERT INTO `pokemon` (`id`, `nom`, `pv`, `attaque`, `defense`, `attaque_spe`, `
 (1358, 'Mewtwo', 106, 110, 90, 154, 90, 130, 150),
 (1359, 'Mew', 100, 100, 100, 100, 100, 100, 151);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `pokemon_type`
---
-
 CREATE TABLE `pokemon_type` (
   `id` int(11) NOT NULL,
   `pokemon_numero` int(10) UNSIGNED NOT NULL,
   `type_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `pokemon_type`
---
 
 INSERT INTO `pokemon_type` (`id`, `pokemon_numero`, `type_id`) VALUES
 (431, 1, 10),
@@ -428,21 +389,11 @@ INSERT INTO `pokemon_type` (`id`, `pokemon_numero`, `type_id`) VALUES
 (644, 150, 12),
 (645, 151, 12);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `type`
---
-
 CREATE TABLE `type` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `color` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Contenu de la table `type`
---
 
 INSERT INTO `type` (`id`, `name`, `color`) VALUES
 (1, 'Acier', 'aaaabb'),
@@ -463,62 +414,31 @@ INSERT INTO `type` (`id`, `name`, `color`) VALUES
 (16, 'Ténèbres', '665544'),
 (17, 'Vol', '6699ff');
 
---
--- Index pour les tables exportées
---
 
---
--- Index pour la table `pokemon`
---
 ALTER TABLE `pokemon`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `numero_2` (`numero`),
   ADD KEY `numero` (`numero`);
 
---
--- Index pour la table `pokemon_type`
---
 ALTER TABLE `pokemon_type`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type_id` (`type_id`),
   ADD KEY `pokemon_numero` (`pokemon_numero`);
 
---
--- Index pour la table `type`
---
 ALTER TABLE `type`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT pour les tables exportées
---
 
---
--- AUTO_INCREMENT pour la table `pokemon`
---
 ALTER TABLE `pokemon`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1360;
---
--- AUTO_INCREMENT pour la table `pokemon_type`
---
-ALTER TABLE `pokemon_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=646;
---
--- AUTO_INCREMENT pour la table `type`
---
-ALTER TABLE `type`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
---
--- Contraintes pour les tables exportées
---
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- Contraintes pour la table `pokemon_type`
---
+ALTER TABLE `pokemon_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `type`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+
 ALTER TABLE `pokemon_type`
   ADD CONSTRAINT `pokemon_type_ibfk_1` FOREIGN KEY (`type_id`) REFERENCES `type` (`id`),
   ADD CONSTRAINT `pokemon_type_ibfk_2` FOREIGN KEY (`pokemon_numero`) REFERENCES `pokemon` (`numero`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

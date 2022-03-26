@@ -17,28 +17,27 @@ $pokemonController = new PokemonController();
 $typeController = new TypeController();
 
 if (isset($_GET['_url'])) {
-    $url = $_GET['_url'];
+  $url = $_GET['_url'];
 } else {
-    $url = '/';
+  $url = '/';
 }
 
 /*
-Router / Dispatcher : il appelle la bonne méthode de controller en fonction de l'URL qui est appelée.
-Le Dispatcher compare l'URL virtuelle appelée avec des routes. Les routes sont les URLs prévues par notre application, les URLs que notre application saura gérer.
+Router : il appelle la bonne méthode de controller en fonction de l'URL qui est appelée.
+Le Router compare l'URL virtuelle appelée avec des routes. Les routes sont les URLs prévues par notre application, les URLs que notre application saura gérer.
 */
 if ($url === '/') { // Accueil
-    $pokemonController->selectAllAction();
+  $pokemonController->selectAllAction();
 } else if ($url === '/pokemon') { // Accueil
-    $pokemonController->selectOneAction();
+  $pokemonController->selectOneAction();
 } else if ($url === '/types') { // Accueil
-    $typeController->selectAllAction();
+  $typeController->selectAllAction();
 } else if ($url === '/type_pokemons') { // Accueil
-    $typeController->selectOneAction();
+  $typeController->selectOneAction();
 } else {
-    /*
-    Si aucune ne route ne correspond à l'URL définie dans la requête HTTP, nous envoyons une erreur 404 (Not Found)
+  /*
+    Si aucune des route ne correspond à l'URL définie dans la requête HTTP, nous envoyons une erreur 404 (Not Found)
     https://www.php.net/manual/fr/function.http-response-code.php
     */
-    http_response_code(404);
-    // $controller->page404();
+  http_response_code(404);
 }
