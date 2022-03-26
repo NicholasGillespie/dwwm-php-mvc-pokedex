@@ -1,4 +1,4 @@
-# Bienvenue à mon projet Pokedex suivant le model MVC
+# Bienvenue à mon projet 'Pokedex' suivant le model MVC
 
 Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. En parcourant le site, vous pourrez visualiser :
 
