@@ -22,7 +22,7 @@ Donc, ski spass :
 1.  L'utilisateur rentre un URL, et donc...
 2.  le router match cet URL ( + query string...) à une route retournant un **controller** et une **action**.
 
-**Simplement**, les controllers sont des classes PHP. Ils contiennent des methodes qui sont les "actions"
+**Simplement** : les controllers sont des classes PHP. Ils contiennent des methodes qui sont eux les "actions"
 
 ```php
 class MainController
