@@ -25,8 +25,31 @@ Donc, ski spass! :
 Simplement, les **controllers** sont des classes PHP. Ils contient des methodes qui sont les "**actions**"
 
 ```php
-$router->add('', ['controller' => 'Home', 'action' => 'index']);
-$router->add('posts/index', ['controller' => 'Posts', 'action' => 'index']);
+class MainController
+{
+  public function show($viewName, $viewVars = [])
+  {
+    include __DIR__ . '/../views/layout/header.tpl.php';
+    include __DIR__ . '/../views/' . $viewName . '.tpl.php';
+    include __DIR__ . '/../views/layout/footer.tpl.php';
+  }
+}
+```
+
+```php
+class PokemonController extends MainController
+{
+  public function selectAllAction()
+  {
+    $DBCon = new DBData();
+
+    $pokemonList = $DBCon->getAllPokemons();
+
+    return $this->show('home', [
+        'pokemonList' => $pokemonList
+    ]);
+  }
+}
 ```
 
 Cette interaction se fait via
