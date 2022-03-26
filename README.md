@@ -1,15 +1,15 @@
 # Bienvenue à mon projet Pokedex suivant le model MVC
 
-Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. Naviguant a travers le site vous pourez visualiser :
+Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. Naviguant à travers le site vous pourez visualiser :
 
 1.  la liste de tous les pokemons.
 2.  le détail des specificités de chanqu'un des pokemons.
-3.  le types de chanqu'un des pokemons.
-4.  filter les pokemons par types.
+3.  les différents types de pokemons.
+4.  et filter les pokemons par types.
 
 ## Front-Controller / Router
 
-Grâce aux configurations du fichier .htaccess, toutes les requêtes sont dirigées vers le fichier index.php ; autrement connu comme "**front-controller**".
+Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php); autrement connu comme "**front-controller**".
 
 Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à des **controllers** et des **actions**.
 
@@ -17,12 +17,12 @@ Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à d
 
 Les **controllers** sont ce avec quoi l'utilisateur interagit.
 
-Donc, ski spass! :
+Donc, ski spass :
 
 1.  L'utilisateur rentre un URL, et donc...
-2.  le router match cet URL (query string...) à une route nous retournant un controller et une action.
+2.  le router match cet URL ( + query string...) à une route retournant un **controller** et une **action**.
 
-Simplement, les **controllers** sont des classes PHP. Ils contient des methodes qui sont les "**actions**"
+**Simplement**, les **controllers** sont des classes PHP. Ils contiennent des methodes qui sont les "**actions**"
 
 ```php
 class MainController
