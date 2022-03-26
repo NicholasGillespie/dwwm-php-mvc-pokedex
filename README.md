@@ -1,6 +1,6 @@
 # Bienvenue à mon projet Pokedex suivant le model MVC
 
-Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. Naviguant à travers le site vous pourez visualiser :
+Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. En parcourant le site, vous pourrez visualiser :
 
 1.  la liste de tous les pokemons.
 2.  le détail des specificités de chanqu'un des pokemons.
@@ -9,7 +9,7 @@ Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. Nav
 
 ## Front-Controller / Router
 
-Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php); autrement connu comme "**front-controller**".
+Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php) ; autrement connu sous le nom de : "**front-controller**".
 
 Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à des **controllers** et des **actions**.
 
