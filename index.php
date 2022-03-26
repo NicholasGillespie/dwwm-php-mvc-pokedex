@@ -26,13 +26,13 @@ if (isset($_GET['_url'])) {
 Router : il appelle la bonne méthode de controller en fonction de l'URL qui est appelée.
 Le Router compare l'URL virtuelle appelée avec des routes. Les routes sont les URLs prévues par notre application, les URLs que notre application saura gérer.
 */
-if ($url === '/') { // Accueil
+if ($url === '/') {
   $pokemonController->selectAllAction();
-} else if ($url === '/pokemon') { // Accueil
+} else if ($url === '/pokemon') {
   $pokemonController->selectOneAction();
-} else if ($url === '/types') { // Accueil
+} else if ($url === '/types') {
   $typeController->selectAllAction();
-} else if ($url === '/type_pokemons') { // Accueil
+} else if ($url === '/type_pokemons') {
   $typeController->selectOneAction();
 } else {
   /*

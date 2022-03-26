@@ -13,6 +13,20 @@ Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requête
 
 Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à des **controllers** et des **actions**.
 
+```php
+if ($url === '/') { // home
+  $pokemonController->selectAllAction();
+} else if ($url === '/pokemon') { // pokemon detail page
+  $pokemonController->selectOneAction();
+} else if ($url === '/types') { // all types page
+  $typeController->selectAllAction();
+} else if ($url === '/type_pokemons') { // by type page
+  $typeController->selectOneAction();
+} else {
+  http_response_code(404);
+}
+```
+
 ## Controller et Actions
 
 Les **controllers** sont ce avec quoi l'utilisateur interagit.
