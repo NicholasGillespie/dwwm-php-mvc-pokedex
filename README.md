@@ -9,7 +9,7 @@ Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. En 
 
 ## Front-Controller / Router
 
-Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php) ; autrement connu sous le nom de : "**front-controller**".
+Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php) ; autrement connu sous le nom de : "**front-controller / router**".
 
 Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à des **controllers** et des **actions**.
 
@@ -17,9 +17,9 @@ Au lieu de diriger les URLs à des fichiers spécifiques, les URLs dirigent à d
 
 Les **controllers** sont ce avec quoi l'utilisateur interagit.
 
-Donc, ski spass :
+Donc ce qui se passe c'est :
 
-1.  L'utilisateur rentre un URL, et donc...
+1.  L'utilisateur rentre un URL,
 2.  le router match cet URL ( + query string...) à une route retournant un **controller** et une **action**.
 
 **Simplement** : les controllers sont des classes PHP. Ils contiennent des methodes qui sont eux les "actions"
