@@ -52,6 +52,42 @@ class PokemonController extends MainController
 }
 ```
 
+## Views
+
+Les **views** sont ce que voit les utilisateurs. C'est donc la page web. Le HTML puis du PHP si cette page est supposé afficher des informations émanants de la base de données. Ces informations sont transmises via les directions des **actions**.
+
+## Models
+
+Les **models** sont où sont stockées les données de l'application. Ils sont le composant responsable du stockage et de la récupération des données.
+
+```php
+class Pokemon
+{
+  private $id;
+  private $nom;
+
+  public function __construct($id, $nom)
+  {
+    $this->id = $id;
+    $this->nom = $nom;
+  }
+
+  /* set the value of an id */
+  public function getId()
+  {
+    return $this->id;
+  }
+
+  /* get the value of an id */
+  public function setId($id): self
+  {
+    $this->id = $id;
+
+    return $this;
+  }
+}
+```
+
 Cette interaction se fait via
 
 1.  Les controllers reçoivent une demande de l'utilisateur via la query string,
