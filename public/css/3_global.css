@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  color: var(--white);
+  background-color: var(--clr-primary-light);
+}
+
+:is(h1, h2, h3) {
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-800);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-primary-dark);
+}
+
+:is(a:hover, a:focus) {
+  color: var(--clr-primary-light);
+}
+
+button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* :is(button:hover, button:focus) {
+  background-color: var(--clr-primary-300);
+} */
+
+:is(a:hover, a:focus) {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

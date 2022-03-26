@@ -1,0 +1,65 @@
+/* container */
+.container {
+  padding-inline: max(var(--s0), 50vw - 1080px / 2);
+  padding-block-end: var(--s0);
+}
+
+/* cluster */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space, 1rem);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(300px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+}
+
+/* sidebar */
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  padding-block-start: var(--s0);
+}
+
+.with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+/* switcher */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s0);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((30rem - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n + 5),
+.switcher > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
+
+.switcher ~ .switcher {
+  margin-block-start: var(--s1);
+}

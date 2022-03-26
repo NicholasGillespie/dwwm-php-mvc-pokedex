@@ -1,0 +1,67 @@
+/* flow > * + * // */
+.flow > :where(:not(:first-child)) {
+  margin-block-start: var(--space-flow, 1em);
+}
+
+/* margin-block-start */
+.margin-block-start {
+  margin-block-start: var(--s0);
+}
+
+/* margin-inline-end */
+.margin-inline-end {
+  margin-inline-end: auto;
+}
+
+/* margin-inline:auto */
+.margin-inline\:auto {
+  margin-inline: auto;
+}
+
+/* margin-block:auto */
+.margin-block\:auto {
+  margin-block: auto;
+}
+
+/* text-align:center */
+.text-align\:center {
+  text-align: center;
+}
+
+/* color:white */
+.color\:white {
+  color: var(--white);
+}
+
+/* background-color:white */
+.background-color\:white {
+  background-color: var(--white);
+}
+
+/* background-color:primary-dark */
+.background-color\:primary-dark {
+  background-color: var(--clr-primary-dark);
+}
+
+/* button */
+.button {
+  padding-inline: var(--s0);
+  padding-block: var(--s-2);
+  border-radius: 5px;
+}
+
+/* justify:space-between */
+.justify\:space-between {
+  justify-content: space-between;
+}
+
+.clr-stats-light {
+  background-color: var(--clr-stats-light);
+}
+.clr-stats-dark {
+  background-color: var(--clr-stats-dark);
+}
+
+.bar {
+  border-radius: 5px;
+}

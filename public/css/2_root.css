@@ -1,0 +1,55 @@
+:root {
+  --clr-primary-light: rgb(193, 64, 64);
+  --clr-primary-dark: rgb(171, 56, 56);
+  --white: rgb(255, 255, 255);
+
+  --clr-stats-dark: rgb(99, 43, 43);
+  --clr-stats-light: rgb(239, 227, 227);
+
+  /* --acier: 
+  --combat: 
+  --dragon: 
+  --eau: 
+  --electrik: 
+  --feu: 
+  --glace: 
+  --acier: 
+  --acier: 
+  --acier: 
+  --acier: 
+  --acier:  */
+
+  /* --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: rgb(245, 247, 255);
+  --clr-neutral-400: hsl(223, 23%, 55%, 1);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --clr-primary-200: hsl(225, 100%, 94%);
+  --clr-primary-300: hsl(245, 83%, 68%, 1);
+  --clr-primary-400: hsl(245, 75%, 52%); */
+
+  /* s0  | s-1:0.667 | s-2:0.444 | s-3:0.296 | s-4:0.198 | s-5:0.132
+  /* s0  |  s1:1.5   |  s2:2.25  |  s3:3.375 |  s4:50.63 |  s5:7.594 */
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+
+  --fs-700: 1.75rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+
+  --fw-400: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --max-inline-size: 70ch;
+}
