@@ -1,5 +1,7 @@
 # Bienvenue à mon projet "Pokedex" suivant le model MVC
 
+Model MVC / PDO
+
 Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. En parcourant le site, vous pourrez visualiser :
 
 1.  la liste de tous les pokemons.
