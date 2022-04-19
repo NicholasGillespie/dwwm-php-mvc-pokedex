@@ -4,7 +4,7 @@ class DBData
   private $pdo;
   public function __construct()
   {
-    $dsn = 'mysql:dbname=dwwm_pokedex_mvc;host=localhost;charset=UTF8';
+    $dsn = 'mysql:dbname=pokedex;host=localhost;charset=UTF8';
     $username = 'root';
     $password = '';
 

@@ -7,6 +7,8 @@ Ceci est une app structuré suivant un modèle _très simpliste_ de **MVC**. En 
 3.  les différents types de pokemons.
 4.  et filter les pokemons par types.
 
+![Webpage screenshot](/public/img/screenshot.jpg)
+
 ## Front-Controller / Router
 
 Grâce aux configurations du fichier [.htaccess](.htaccess), toutes les requêtes sont dirigées vers le fichier [index.php](index.php) ; autrement connu sous le nom de : "**front-controller / router**".
@@ -69,6 +71,8 @@ class PokemonController extends MainController
 ## Views
 
 Les **views** sont ce que voit les utilisateurs. C'est donc la page web. Le HTML puis du PHP si cette page est supposé afficher des informations émanants de la base de données. Ces informations sont transmises via les directions des **actions**.
+
+Pour info, la structure du site est 100% algorithmique, signifiant suppression totale des "@media" break-points.
 
 ## Models
 
